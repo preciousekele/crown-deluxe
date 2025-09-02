@@ -38,7 +38,6 @@
 }
 
 .nav-link {
-
   background: none;
   border: none;
   color: rgba(255, 255, 255, 1);
@@ -56,7 +55,25 @@
   text-align: center;
   vertical-align: justify;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
+.nav-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.nav-link.active {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 .menu-toggle {
@@ -76,45 +93,3 @@
   transition: all 0.3s ease;
 }
 
-/* Mobile device */
-@media (max-width: 768px) {
-  .header {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-  }
-
-  .nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-  }
-
-  .nav-open {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1rem;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .nav-link {
-    font-size: 1.1rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-}

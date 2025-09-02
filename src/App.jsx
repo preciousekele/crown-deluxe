@@ -9,16 +9,24 @@ import About from "./components/About/About";
 import Service from "./components/Service/Service";
 import Partners from "./components/Partners/Partners";
 import Footer from "./components/Footer/Footer";
+import Contact from "./components/Contact/Contact"; // Import your Contact component
+
 function App() {
   const dispatch = useDispatch();
   const { activeSection } = useSelector((state) => state.navigation);
 
+  // Check if we're on the contact page
+  const isContactPage = activeSection === 'contact';
+
   useEffect(() => {
     const handleScroll = () => {
+      // Don't handle scroll on contact page
+      if (isContactPage) return;
+
       const scrollPosition = window.scrollY;
       dispatch(setScrollPosition(scrollPosition));
 
-      const sections = ["home", "offer", "services", "partners", "map", "contact"];
+      const sections = ["home", "offer", "services", "partners"];
       const sectionElements = sections.map((id) => document.getElementById(id));
 
       let currentSection = "home";
@@ -38,7 +46,22 @@ function App() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [dispatch, activeSection]);
+  }, [dispatch, activeSection, isContactPage]);
+
+  const handleNavigation = (sectionId) => {
+    if (sectionId === 'contact') {
+      // Navigate to contact page
+      dispatch(setActiveSection('contact'));
+    } else {
+      // Navigate to other sections
+      dispatch(setActiveSection(sectionId));
+      
+      // Scroll to section if not on contact page
+      if (!isContactPage) {
+        scrollToSection(sectionId);
+      }
+    }
+  };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -50,13 +73,23 @@ function App() {
     }
   };
 
+  // Render contact page
+  if (isContactPage) {
+    return (
+      <div className="App">
+        <Contact onNavigate={handleNavigation} />
+      </div>
+    );
+  }
+
+  // Render main page
   return (
     <div className="App">
       <main>
         <section id="home">
-          <Hero onNavigate={scrollToSection} />
+          <Hero onNavigate={handleNavigation} />
         </section>
-        <section id="about">
+        <section id="offer">
           <About />
         </section>
         <section id="services">
@@ -65,13 +98,9 @@ function App() {
         <section id="partners">
           <Partners />
         </section>
-        {/* <section id="map">
-          <Map />
-        </section> */}
         <section id="footer">
           <Footer />
-        </section>{" "}
-        
+        </section>
       </main>
     </div>
   );

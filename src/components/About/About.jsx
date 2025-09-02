@@ -1,9 +1,65 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./About.css";
 // import aboutImage from "../../../public/images/aboutImage.png";
 import about1 from "../../../public/images/about/about1.png";
 import about2 from "../../../public/images/about/about2.png";
 import about3 from "../../../public/images/about/about3.png";
+
+const AnimatedCounter = ({ end, duration = 2000, suffix = "" }) => {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const countRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          animateCounter();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (countRef.current) {
+      observer.observe(countRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+
+  const animateCounter = () => {
+    const startTime = Date.now();
+    const startValue = 0;
+    
+    const updateCounter = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      //animation
+      const easeOutExpo = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      const currentCount = Math.floor(startValue + (end - startValue) * easeOutExpo);
+      
+      setCount(currentCount);
+      
+      if (progress < 1) {
+        requestAnimationFrame(updateCounter);
+      } else {
+        setCount(end);
+      }
+    };
+    
+    updateCounter();
+  };
+
+  return (
+    <div ref={countRef} className="stat-number">
+      {count}{suffix}
+    </div>
+  );
+};
+
 const About = () => {
   return (
     <div className="about-container">
@@ -31,15 +87,15 @@ const About = () => {
         <div className="about-right">
           <div className="stats-container">
             <div className="stat-item">
-              <div className="stat-number">20 </div>
+              <AnimatedCounter end={20} duration={3000} />
               <div className="stat-label">Products</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">30</div>
+              <AnimatedCounter end={30} duration={3500} />
               <div className="stat-label">Clients</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">2000+</div>
+              <AnimatedCounter end={2000} duration={4500} suffix="+" />
               <div className="stat-label">Clients</div>
             </div>
           </div>
