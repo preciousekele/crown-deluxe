@@ -1,0 +1,193 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #351730;
+}
+
+.hero-bg-image {
+  width: 100vw;  
+  height: 100vh; 
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(25, 3, 21, 1) 100%
+  );
+}
+
+.hero-container {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  padding-top: 13em;
+}
+
+.hero-content {
+  width: 771px;
+  height: 386px;
+  top: 397px;
+  left: 120px;
+  gap: 16px;
+}
+
+.hero-title {
+  font-size: 58px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  letter-spacing: -1px;
+  font-weight: 700;
+  line-height: 66px;
+  animation: fadeInUp 1s ease-out;
+  color: rgba(255, 255, 255, 1);
+}
+
+.hero-sub {
+  width: 771px;
+  height: 68px;
+  padding-bottom: 2rem;
+}
+
+.hero-subtitle {
+  font-size: 26px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 30px;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  animation: fadeInUp 1s ease-out 0.3s both;
+  font-weight: 200;
+  font-style: regular;
+  margin-top: -2rem;
+  letter-spacing: 0;
+}
+
+.app-download-buttons {
+  display: flex;
+  width: 557px;
+  height: 56px;
+  gap: 24px;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  padding: 16px 24px 16px 24px;
+}
+
+.download-btn.google-play {
+  background:rgba(116, 49, 104, 1)
+}
+
+.download-btn.app-store {
+  background: rgba(116, 49, 104, 1)
+}
+
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-text {
+  text-align: center;
+}
+
+.btn-sub {
+  font-size: 16px;
+  opacity: 0.9;
+  line-height: 100%;
+  letter-spacing: -0.2px;
+  font-style: regular;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero-container {
+    padding-top: 6rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .app-download-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .download-btn {
+    width: 100%;
+    max-width: 220px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .hero-container {
+    padding: 0 1rem;
+    padding-top: 5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+}
