@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { toggleMenu, setMenuOpen } from '../../redux/slices/navigationSlice'
 import './Header.css'
 import logoImg from '../../../public/images/logo.png'
+
 const Header = ({ onNavigate }) => {
   const dispatch = useDispatch()
   const { activeSection, isMenuOpen } = useSelector(state => state.navigation)
@@ -47,7 +48,7 @@ const Header = ({ onNavigate }) => {
         </nav>
 
         <button 
-          className="menu-toggle"
+          className={`menu-toggle ${isMenuOpen ? 'open' : ''}`}
           onClick={handleMenuToggle}
           aria-label="Toggle menu"
         >

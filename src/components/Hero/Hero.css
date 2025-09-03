@@ -18,8 +18,8 @@
 }
 
 .hero-bg-image {
-  width: 100vw;  
-  height: 100vh; 
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   object-position: center;
   top: 0;
@@ -61,7 +61,7 @@
 
 .hero-title {
   font-size: 58px;
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: "Bricolage Grotesque", sans-serif;
   letter-spacing: -1px;
   font-weight: 700;
   line-height: 66px;
@@ -109,13 +109,12 @@
 }
 
 .download-btn.google-play {
-  background:rgba(116, 49, 104, 1)
+  background: rgba(116, 49, 104, 1);
 }
 
 .download-btn.app-store {
-  background: rgba(116, 49, 104, 1)
+  background: rgba(116, 49, 104, 1);
 }
-
 
 .btn-icon {
   width: 24px;
@@ -151,35 +150,24 @@
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  .hero-container {
-    padding-top: 6rem;
+  .hero-content {
+    margin-top: 90px;
   }
-
   .hero-title {
-    font-size: 2.8rem;
+    font-size: 50px;
+    line-height: 100%;
+    width: 90vw;
+    text-align: center;
   }
 
+  .hero-bg-image {
+    width: 100vw;
+    height: 100vh;
+  }
   .hero-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .app-download-buttons {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .download-btn {
-    width: 100%;
-    max-width: 220px;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 2.2rem;
-    line-height: 1.2;
+    font-size: 21px;
+    width: 90vw;
+    text-align: center;
   }
 
   .hero-container {
@@ -189,5 +177,108 @@
 
   .hero-content {
     max-width: 100%;
+  }
+  .hero {
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+  }
+  .app-download-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    gap: 15px; 
+    margin: 20px auto; 
+  }
+  .btn-icon {
+    width: 24px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .btn-sub {
+    font-size: 12px;
+    opacity: 0.9;
+    line-height: 100%;
+    letter-spacing: -0.2px;
+    font-style: regular;
+  }
+  .download-btn {
+    width: 200px; 
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    margin-top: 90px;
+  }
+  .hero-title {
+    font-size: 34px;
+    line-height: 100%;
+    width: 90vw;
+    text-align: center;
+  }
+
+  .hero-bg-image {
+    width: 100vw;
+    height: 100vh;
+  }
+  .hero-subtitle {
+    font-size: 15px;
+    width: 90vw;
+    text-align: center;
+  }
+
+  .hero-container {
+    padding: 0 1rem;
+    padding-top: 5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero {
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+  }
+  .app-download-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    gap: 15px; 
+    margin: 20px auto; 
+  }
+  .btn-icon {
+    width: 24px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .btn-sub {
+    font-size: 12px;
+    opacity: 0.9;
+    line-height: 100%;
+    letter-spacing: -0.2px;
+    font-style: regular;
+  }
+  .download-btn {
+    width: 200px; 
+    justify-content: center;
   }
 }
