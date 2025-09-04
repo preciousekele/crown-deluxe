@@ -4,6 +4,8 @@ import "./About.css";
 import about1 from "../../../public/images/about/about1.png";
 import about2 from "../../../public/images/about/about2.png";
 import about3 from "../../../public/images/about/about3.png";
+import gasImages from "../../../public/images/about/frame83.png";
+import gasImagesmobile from "../../../public/images/about/frame84.png";
 
 const AnimatedCounter = ({ end, duration = 2000, suffix = "" }) => {
   const [count, setCount] = useState(0);
@@ -101,10 +103,11 @@ const About = () => {
           </div>
 
           <div className="about-image">
-            {/* <img src={aboutImage} alt="Gas cylinders storage" /> */}
-            <img src={about1} alt="Gas cylinders" className="about1"/>
+            <img src={gasImages} alt="Gas cylinders storage" className="about-image-desktop"/> 
+            <img src={gasImagesmobile} alt="Gas cylinders storage" className="about-image-mobile"/>
+            {/* <img src={about1} alt="Gas cylinders" className="about1"/>
             <img src={about2} alt="Gas cylinders" className="about2" />
-            <img src={about3} alt="Gas cylinders" className="about3"/>
+            <img src={about3} alt="Gas cylinders" className="about3"/> */}
           </div>
         </div>
       </div>

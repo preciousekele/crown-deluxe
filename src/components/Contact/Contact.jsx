@@ -10,7 +10,6 @@ import Map from '../Map/Map';
 const Contact = ({ onNavigate }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log('Form submitted');
   };
 

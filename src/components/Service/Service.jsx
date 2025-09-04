@@ -9,7 +9,7 @@ const CAROUSEL_DATA = [
     title: "Automated Gas Station Construction",
     description:
       "We provide easy retail LPG services. Families and neighbourhood retailers can easily obtain cooking gas thanks to our refilling plants.",
-    image: "../../../public/images/services/gas.png",
+    image: "../../../public/images/services/automatedgas.png",
     icon: "../../../public/images/services/services1.svg",
   },
   {
@@ -141,9 +141,7 @@ const Services = () => {
           <div className="main-content">
             <h3 className="main-title">
               We provide bulk LPG supply, automated
-              <br />
               gas station construction, and real-time
-              <br />
               delivery tracking for seamless operations.
             </h3>
           </div>
