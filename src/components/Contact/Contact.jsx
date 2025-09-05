@@ -120,4 +120,5 @@ const Contact = ({ onNavigate }) => {
   );
 };
 
+
 export default Contact;
