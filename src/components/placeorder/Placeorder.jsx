@@ -1,5 +1,5 @@
 import React from "react";
-import "./PlaceOrder.css";
+import "./Placeorder.css";
 import placeorderman from "/images/footer/manorder.jpg";
 import playstore from "/images/playstore.png";
 import placeorderimage from "/images/featured/about3.png";
