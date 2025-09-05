@@ -138,8 +138,7 @@
 }
 
 .submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(139, 90, 140, 0.3);
+  background: rgb(100, 38, 89);
 }
 
 .submit-btn:active {
@@ -249,7 +248,7 @@
   }
 
   .contact-form-container {
-    width: 350px;
+    width: 80vw;
     margin-left: 0;
     margin-top: 0;
     padding: 24px;

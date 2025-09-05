@@ -99,11 +99,17 @@
   }
   
   .partner-subtitle {
-    font-size: 12px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0px;
   }
   
   .partner-title {
-    font-size: 16px;
+    font-size: 24px;
+     font-weight: 400;
+    line-height: 37px;
+    letter-spacing: -1px;
   }
   
   .partner-track {

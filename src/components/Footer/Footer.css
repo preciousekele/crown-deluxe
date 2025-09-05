@@ -435,7 +435,6 @@
     margin-top: 15px;
   }
   
-  /* Company Info for mobile */
   .company-info {
     text-align: center;
     gap: 1rem;
@@ -456,14 +455,14 @@
     height: auto;
     font-size: 14px;
     line-height: 20px;
-    text-align: center;
+    text-align: justify;
     max-width: none;
   }
   
   /* Navigation and Products sections - side by side layout like in image */
   .footer-section,
   .footer-products {
-    margin-left: 0;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
   }
