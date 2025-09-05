@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux'
 import Header from '../Header/Header'
 import './Hero.css'
-import bgImage from "../../../public/images/bg_image.jpg"
-import playstore from "../../../public/images/playstore.png"
+import bgImage from "/images/bg_image.jpg"
+import playstore from "/images/playstore.png"
 const Hero = ({ onNavigate }) => {
   const { theme } = useSelector(state => state.app)
 

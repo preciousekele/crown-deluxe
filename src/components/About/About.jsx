@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./About.css";
 // import aboutImage from "../../../public/images/aboutImage.png";
-import about1 from "../../../public/images/about/about1.png";
-import about2 from "../../../public/images/about/about2.png";
-import about3 from "../../../public/images/about/about3.png";
-import gasImages from "../../../public/images/about/frame83.png";
-import gasImagesmobile from "../../../public/images/about/frame84.png";
+// import about1 from "../../../public/images/about/about1.png";
+// import about2 from "../../../public/images/about/about2.png";
+// import about3 from "../../../public/images/about/about3.png";
+import gasImages from "/images/about/frame83.png";
+import gasImagesmobile from "/images/about/frame84.png";
 
 const AnimatedCounter = ({ end, duration = 2000, suffix = "" }) => {
   const [count, setCount] = useState(0);

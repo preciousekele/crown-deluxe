@@ -1,11 +1,11 @@
 import React from "react";
 import "./Footer.css";
-import logoImg from "../../../public/images/logo.png";
-import facebookImg from "../../../public/images/footer/facebook.svg";
-import instagramImg from "../../../public/images/footer/instagram.svg";
-import whatsappImg from "../../../public/images/footer/whatsapp.svg";
-import emailImg from "../../../public/images/footer/email.png";
-import playstore from "../../../public/images/playstore.png";
+import logoImg from "/images/logo.png";
+import facebookImg from "/images/footer/facebook.svg";
+import instagramImg from "/images/footer/instagram.svg";
+import whatsappImg from "/images/footer/whatsapp.svg";
+import emailImg from "/images/footer/email.png";
+import playstore from "/images/playstore.png";
 
 const Footer = () => {
   return (

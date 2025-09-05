@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Service.css";
 import { ChevronRight } from "lucide-react";
-import playstore from "../../../public/images/playstore.png"
+import playstore from "/images/playstore.png"
 
 const CAROUSEL_DATA = [
   {
@@ -9,24 +9,24 @@ const CAROUSEL_DATA = [
     title: "Automated Gas Station Construction",
     description:
       "We provide easy retail LPG services. Families and neighbourhood retailers can easily obtain cooking gas thanks to our refilling plants.",
-    image: "../../../public/images/services/automatedgas.png",
-    icon: "../../../public/images/services/services1.svg",
+    image: "/images/services/automatedgas.png",
+    icon: "/images/services/services1.svg",
   },
   {
     id: 2,
     title: "Bulk LPG Sale",
     description:
       "We provide easy retail LPG services. Families and neighbourhood retailers can easily obtain cooking gas thanks to our refilling plants.",
-    image: "../../../public/images/services/brandgas.png",
-    icon: "../../../public/images/services/services2.svg",
+    image: "/images/services/brandgas.png",
+    icon: "/images/services/services2.svg",
   },
   {
     id: 3,
     title: "Real-time Gas Tracking",
     description:
       "We provide easy retail LPG services. Families and neighbourhood retailers can easily obtain cooking gas thanks to our refilling plants.",
-    image: "../../../public/images/services/truck.jpg",
-    icon: "../../../public/images/services/services1.svg",
+    image: "/images/services/truck.jpg",
+    icon: "/images/services/services1.svg",
   },
 ];
 
@@ -36,28 +36,28 @@ const FEATURED_PRODUCTS = [
     name: "3kg Gas Cylinder",
     category: "Accessories",
     price: "₦5,000.00",
-    image: "../../../public/images/featured/about3.png",
+    image: "/images/featured/about3.png",
   },
   {
     id: 2,
     name: "6kg Gas Cylinder",
     category: "Accessories",
     price: "₦8,500.00",
-    image: "../../../public/images/featured/about3.png",
+    image: "/images/featured/about3.png",
   },
   {
     id: 3,
     name: "12kg Gas Cylinder",
     category: "Accessories",
     price: "₦15,000.00",
-    image: "../../../public/images/featured/about2.png",
+    image: "/images/featured/about2.png",
   },
   {
     id: 4,
     name: "50kg Gas Cylinder",
     category: "Accessories",
     price: "₦45,000.00",
-    image: "../../../public/images/featured/about1.png",
+    image: "/images/featured/about1.png",
   },
 ];
 

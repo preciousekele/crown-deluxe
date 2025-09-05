@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from '../Header/Header';
 import './Contact.css';
-import phoneImg from "../../../public/images/contact/phone.png";
-import locationImg from "../../../public/images/contact/location.png";
-import emailImg from "../../../public/images/contact/email.png";
+import phoneImg from "/images/contact/phone.png";
+import locationImg from "/images/contact/location.png";
+import emailImg from "/images/contact/email.png";
 import Footer from '../Footer/Footer';
 import Map from '../Map/Map';
 // import PlaceOrder from '../placeorder/placeorder';

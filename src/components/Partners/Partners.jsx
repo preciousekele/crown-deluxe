@@ -2,14 +2,14 @@ import React from 'react';
 import './Partners.css'; 
 
 const PARTNERS = [
-  { url: "../../../public/images/featured/partner1.svg" },
-  { url: "../../../public/images/featured/partner2.svg" },
-  { url: "../../../public/images/featured/partner3.svg" },
-  { url: "../../../public/images/featured/partner4.svg" },
+  { url: "/images/featured/partner1.svg" },
+  { url: "/images/featured/partner2.svg" },
+  { url: "/images/featured/partner3.svg" },
+  { url: "/images/featured/partner4.svg" },
   // { url: "../../../public/images/featured/partner5.png" },
-  { url: "../../../public/images/featured/partner7.svg" },
-  { url: "../../../public/images/featured/partner9.png" },
-  { url: "../../../public/images/featured/partner8.svg" },
+  { url: "/images/featured/partner7.svg" },
+  { url: "/images/featured/partner9.png" },
+  { url: "/images/featured/partner8.svg" },
 ];
 
 const Partners = () => {

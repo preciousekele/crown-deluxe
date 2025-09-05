@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleMenu, setMenuOpen } from '../../redux/slices/navigationSlice'
 import './Header.css'
-import logoImg from '../../../public/images/logo.png'
+import logoImg from '/images/logo.png'
 
 const Header = ({ onNavigate }) => {
   const dispatch = useDispatch()
