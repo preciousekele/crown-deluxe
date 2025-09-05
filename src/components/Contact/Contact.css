@@ -179,8 +179,8 @@
   }
 
   .contact-form-container {
-    width: 330px;
-    max-width: 330px;
+    width: 100%;
+    max-width: 80vw;
     padding: 32px;
     margin-left: -55px;
   }
@@ -248,7 +248,7 @@
   }
 
   .contact-form-container {
-    width: 80vw;
+    width: 81vw;
     margin-left: 0;
     margin-top: 0;
     padding: 24px;

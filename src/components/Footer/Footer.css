@@ -24,7 +24,6 @@
   }
 }
 
-/* Company Info Section */
 .company-info {
   display: flex;
   flex-direction: column;
@@ -64,7 +63,6 @@
   text-align: justify;
 }
 
-/* Navigation and Products Sections */
 .footer-section {
   flex-direction: column;
   margin-left: 130px;
@@ -110,7 +108,6 @@
   color: rgba(255, 255, 255, 1);
 }
 
-/* Social and Download Section */
 .footer-bottom {
   padding-top: 1.5rem;
   margin-top: 1rem;
@@ -186,7 +183,6 @@
   }
 }
 
-/* Social Media Links */
 .social-links {
   display: flex;
   align-items: center;
@@ -305,7 +301,6 @@
   margin-top: 0.125rem;
 }
 
-/* Copyright */
 .copyright {
   text-align: center;
   margin-top: 4.5rem;
@@ -321,7 +316,7 @@
   margin: 0;
 }
 
-/* TABLET RESPONSIVENESS (1024px - 768px) */
+/* tablet, ipads (1024px - 768px) */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .footer {
     padding: 2.5rem 1.25rem;
@@ -336,7 +331,6 @@
     margin-top: 20px;
   }
   
-  /* Company Info adjustments for tablet */
   .company-info {
     gap: 0.75rem;
   }
@@ -354,7 +348,6 @@
     line-height: 22px;
   }
   
-  /* Navigation and Products sections for tablet */
   .footer-section {
     margin-left: 80px;
   }
@@ -375,10 +368,9 @@
     gap: 12px;
   }
   
-  /* Footer bottom adjustments */
   .footer-bottom {
     margin-bottom: 50px;
-    margin-left: -5px;
+    margin-left: -15vw;
   }
   
   .footer-app-download-buttons {
@@ -388,12 +380,12 @@
   }
   
   .footer-download-btn {
-    min-width: 150px;
-    padding: 14px 20px;
+    min-width: 230px;
+    padding: 20px 25px;
   }
   
   .footer-btn-sub {
-    font-size: 14px;
+    font-size: 17px;
   }
   
   .footer-btn-icon {
@@ -401,6 +393,10 @@
     height: 20px;
   }
   
+  .footer-icon-google{
+    width: 20px;
+    height: 20px;
+  }
   .social-link {
     padding: 0.4rem 0.6rem;
     font-size: 12px;
@@ -459,7 +455,6 @@
     max-width: none;
   }
   
-  /* Navigation and Products sections - side by side layout like in image */
   .footer-section,
   .footer-products {
     margin-left: 10px;
@@ -474,7 +469,7 @@
   }
   
   .company-info {
-    grid-column: 1 / -1; /* Company info spans full width */
+    grid-column: 1 / -1; 
   }
   
   .footer-title {
@@ -496,7 +491,6 @@
     color: rgba(255, 255, 255, 1);
   }
   
-  /* Footer bottom for mobile */
   .footer-bottom {
     margin-top: 2rem;
     margin-bottom: 30px;
@@ -511,7 +505,6 @@
     gap: 2rem;
   }
   
-  /* Social links for mobile */
   .social-links {
     flex-wrap: wrap;
     justify-content: center;
@@ -531,7 +524,6 @@
     height: 16px;
   }
   
-  /* App download buttons for mobile */
   .footer-app-download-buttons {
     width: 100%;
     max-width: 270px;
@@ -557,7 +549,6 @@
     height: 20px;
   }
   
-  /* Copyright for mobile */
   .copyright {
     margin-top: 2.5rem;
     padding-top: 1.5rem;

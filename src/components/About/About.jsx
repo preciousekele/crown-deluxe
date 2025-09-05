@@ -98,7 +98,7 @@ const About = () => {
             </div>
             <div className="stat-item">
               <AnimatedCounter end={2000} duration={4500} suffix="+" />
-              <div className="stat-label">Clients</div>
+              <div className="stat-label">Customers</div>
             </div>
           </div>
 

@@ -8,7 +8,7 @@ const CAROUSEL_DATA = [
     id: 1,
     title: "Automated Gas Station Construction",
     description:
-      "We provide easy retail LPG services. Families and neighbourhood retailers can easily obtain cooking gas thanks to our refilling plants.",
+      "Our expert Engineering and Installation Service by our Certified technicians has the resources to asist you in building or upgrading your LPG Gas Station to meet international standards.",
     image: "/images/services/automatedgas.png",
     icon: "/images/services/services1.svg",
   },
@@ -24,7 +24,7 @@ const CAROUSEL_DATA = [
     id: 3,
     title: "Real-time Gas Tracking",
     description:
-      "We provide easy retail LPG services. Families and neighbourhood retailers can easily obtain cooking gas thanks to our refilling plants.",
+      "Customers who order LPG for their homes and gas stations will have access to driver's real-time location tracking at their fingertips.",
     image: "/images/services/truck.jpg",
     icon: "/images/services/services1.svg",
   },

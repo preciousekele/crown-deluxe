@@ -6,7 +6,7 @@ import locationImg from "/images/contact/location.png";
 import emailImg from "/images/contact/email.png";
 import Footer from '../Footer/Footer';
 import Map from '../Map/Map';
-// import PlaceOrder from '../placeorder/placeorder';
+import PlaceOrder from '../placeorder/placeorder';
 
 const Contact = ({ onNavigate }) => {
   const handleSubmit = (e) => {
@@ -114,7 +114,7 @@ const Contact = ({ onNavigate }) => {
               height="786px"
               className="rounded-lg shadow-md"
             />
-            {/* <PlaceOrder /> */}
+           <PlaceOrder />
       <Footer />
     </div>
   );

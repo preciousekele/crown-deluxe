@@ -18,7 +18,7 @@ const Hero = ({ onNavigate }) => {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            LPG Gas Cylinder refills and professional station and construction services
+            LPG Gas Cylinder Refills and Professional Gas Station Construction Services
           </h1>
           
           <div className="hero-sub">

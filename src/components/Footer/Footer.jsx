@@ -81,11 +81,11 @@ const Footer = () => {
           <div className="social-download-container">
             {/* Social Media Links */}
             <div className="social-links">
-              <a href="#" className="social-link social-facebook">
+              <a href="https://web.facebook.com/people/Crown-Deluxe-Limited/61553264131720/?mibextid=LQQJ4d" className="social-link social-facebook">
                 <img src={facebookImg} alt="Facebook" className="social-icon" />
                 <span>Facebook</span>
               </a>
-              <a href="#" className="social-link social-instagram">
+              <a href="https://www.instagram.com/crowndeluxeltd/?igshid=N2Z1OG8zZ3JhOTU0&utm_source=qr" className="social-link social-instagram">
                 <img
                   src={instagramImg}
                   alt="Instagram"
@@ -93,11 +93,11 @@ const Footer = () => {
                 />
                 <span>Instagram</span>
               </a>
-              <a href="#" className="social-link social-whatsapp">
+              <a href="https://api.whatsapp.com/send/?phone=2348108367553&text&type=phone_number&app_absent=0" className="social-link social-whatsapp">
                 <img src={whatsappImg} alt="WhatsApp" className="social-icon" />
                 <span>WhatsApp</span>
               </a>
-              <a href="#" className="social-link social-email">
+              <a href="mailto:sales@crowndeluxe.com" className="social-link social-email">
                 <img src={emailImg} alt="Email" className="social-icon" />
                 <span>Send a mail</span>
               </a>
@@ -107,7 +107,7 @@ const Footer = () => {
             <div className="footer-app-download-buttons">
               <a href="#" className="footer-download-btn google-play">
                 <div className="footer-btn-icon">
-                  <img src={playstore} alt="Google Play" />
+                  <img src={playstore} alt="Google Play" className="footer-icon-google"/>
                 </div>
                 <div className="footer-btn-text">
                   <span className="footer-btn-sub">
@@ -137,7 +137,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="copyright">
-          <p>Crown Deluxe © 2024. All Rights Reserved</p>
+          <p>Crown Deluxe © 2025. All Rights Reserved</p>
         </div>
       </div>
     </footer>

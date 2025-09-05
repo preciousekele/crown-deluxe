@@ -1,12 +1,15 @@
 .place-order-container {
   display: flex;
   gap: 20px;
-  padding: 20px;
+  padding: 0;
   background-color: #000;
   min-height: 90vh;
   align-items: center;
   justify-content: center;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  position: relative;
+  margin-bottom: -30px;
+  margin-top: -10px;
 }
 
 .order-card {
@@ -21,19 +24,22 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 500px;
+  z-index: 1;
 }
+
 .order-card-man {
-  background: rgba(153, 94, 142, 1);
+  background: black;
   border-radius: 20px;
-  padding: 40px 30px;
+  padding: 0;
   color: white;
-  width: 350px;
+  width: 400px;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 500px;
+  min-height: 580px;
+  height: 500px;
 }
 
 .order-content {
@@ -42,80 +48,60 @@
 }
 
 .order-title {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
-  margin-bottom: 30px;
-  line-height: 44px;
-  letter-spacing: -0.02px;
+  margin-bottom: 20px;
+  line-height: 35px;
+  letter-spacing: -0.2px;
+  margin-top: 10px;
+}
+
+.btn-icon-order {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-icon-order .order-btn-img {
+  width: 20px;
+  height: 20px;
 }
 
 .download-buttons-order {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-top: 50px;
   margin-bottom: 0px;
-  width: 300px;
+  width: 235px;
   padding: 0px 0px 0px 0px;
 }
-.btn-sub-order{
-    font-size: 16px;
-}
-.download-btn-order{
-    padding: 10px 10px 10px 10px;
-}
 
-
-.play-icon {
-  width: 24px;
-  height: 24px;
-  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  color: white;
+.btn-sub-order {
+  font-size: 13px;
 }
-
-.apple-icon {
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
+.download-btn-order {
+  padding: 10px 10px 10px 10px;
 }
 
 .order-subtitle {
-  font-size: 1rem;
+  font-size: 15px;
   opacity: 0.9;
   line-height: 1.4;
-  margin: 0;
   font-weight: 400;
-}
-
-.gas-cylinder-section {
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  z-index: 1;
-}
-
-.gas-cylinder {
-  width: 200px;
-  height: auto;
-  opacity: 0.9;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  margin-top: 180px;
 }
 
 .delivery-man-card {
   background: linear-gradient(135deg, #f5f5dc 0%, #e6e6be 100%);
   border-radius: 20px;
-  width: 350px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .delivery-man {
@@ -123,10 +109,61 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 20px;
+  object-position: -480px center;
+  background: linear-gradient();
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+.delivery-man-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom left,
+    transparent 0%,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(19, 6, 17, 1) 100%
+  );
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.placeorderimage1 {
+  position: absolute;
+  bottom: -95px;
+  right: -95px;
+  z-index: 0;
+  pointer-events: none;
+  transform: rotate(1deg);
+}
+
+.gas-cylinder-right {
+  width: 280px;
+  height: 380px;
+  opacity: 0.8;
+  transform: rotate(10deg);
+}
+
+.placeorderimage2 {
+  position: absolute;
+  bottom: -98px;
+  left: -185px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gas-cylinder-left {
+  width: 275px;
+  height: 380px;
+  opacity: 0.8;
+  transform: rotate(10deg);
+}
+
+@media (max-width: 1024px) {
   .place-order-container {
     display: none;
   }
