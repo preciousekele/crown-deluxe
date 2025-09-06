@@ -9,14 +9,15 @@ import About from "./components/About/About";
 import Service from "./components/Service/Service";
 import Partners from "./components/Partners/Partners";
 import Footer from "./components/Footer/Footer";
-import Contact from "./components/Contact/Contact"; // Import your Contact component
+import Contact from "./components/Contact/Contact";
+import AppDownloadModal from "./components/appmodal/Appmodal";
 
 function App() {
   const dispatch = useDispatch();
   const { activeSection } = useSelector((state) => state.navigation);
 
-  // Check if we're on the contact page
-  const isContactPage = activeSection === 'contact';
+  // Check if on the contact page
+  const isContactPage = activeSection === "contact";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,7 +51,11 @@ function App() {
 
   const handleNavigation = (sectionId) => {
     if (sectionId === 'contact') {
-      // Navigate to contact page
+      // Navigate to contact page and scroll to top
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
       dispatch(setActiveSection('contact'));
     } else {
       // Navigate to other sections
@@ -59,6 +64,12 @@ function App() {
       // Scroll to section if not on contact page
       if (!isContactPage) {
         scrollToSection(sectionId);
+      } else {
+        // If coming from contact page to main page, scroll to top first then to section
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        setTimeout(() => {
+          scrollToSection(sectionId);
+        }, 100);
       }
     }
   };
@@ -78,6 +89,7 @@ function App() {
     return (
       <div className="App">
         <Contact onNavigate={handleNavigation} />
+        <AppDownloadModal />
       </div>
     );
   }
@@ -93,15 +105,16 @@ function App() {
           <About />
         </section>
         <section id="services">
-          <Service />
-        </section> 
+          <Service onNavigate={handleNavigation} />
+        </section>
         <section id="partners">
           <Partners />
         </section>
         <section id="footer">
-          <Footer />
+          <Footer onNavigate={handleNavigation} />
         </section>
       </main>
+      <AppDownloadModal />
     </div>
   );
 }

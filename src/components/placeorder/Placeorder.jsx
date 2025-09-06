@@ -3,8 +3,16 @@ import "./Placeorder.css";
 import placeorderman from "/images/footer/manorder.jpg";
 import playstore from "/images/playstore.png";
 import placeorderimage from "/images/featured/about3.png";
+import { useDispatch } from 'react-redux'
+import { openAppDownloadModal } from '../../redux/slices/appSlice'
 
 const PlaceOrder = () => {
+  const dispatch = useDispatch();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    dispatch(openAppDownloadModal());
+  };
   return (
     <div className="place-order-container">
       <div className="order-card">
@@ -14,16 +22,28 @@ const PlaceOrder = () => {
           </h2>
 
           <div className="download-buttons-order">
-            <a href="#" className="download-btn google-play">
+            <a
+              href="#"
+              className="download-btn google-play"
+              onClick={handleClick}
+            >
               <div className="btn-icon-order">
-                <img src={playstore} alt="Gas flame background" className="order-btn-img"/>
+                <img
+                  src={playstore}
+                  alt="Gas flame background"
+                  className="order-btn-img"
+                />
               </div>
               <div className="btn-text">
                 <span className="btn-sub-order">Download on Google Play</span>
               </div>
             </a>
 
-            <a href="#" className="download-btn app-store">
+            <a
+              href="#"
+              className="download-btn app-store"
+              onClick={handleClick}
+            >
               <div className="btn-icon">
                 <svg viewBox="0 0 20 24" width="30" height="30">
                   <path
@@ -44,7 +64,11 @@ const PlaceOrder = () => {
         </div>
 
         <div className="placeorderimage1">
-          <img src={placeorderimage} alt="Gas Cylinder" className="gas-cylinder-right" />
+          <img
+            src={placeorderimage}
+            alt="Gas Cylinder"
+            className="gas-cylinder-right"
+          />
         </div>
       </div>
 
@@ -56,9 +80,13 @@ const PlaceOrder = () => {
             className="delivery-man"
           />
         </div>
-        
+
         <div className="placeorderimage2">
-          <img src={placeorderimage} alt="Gas Cylinder" className="gas-cylinder-left" />
+          <img
+            src={placeorderimage}
+            alt="Gas Cylinder"
+            className="gas-cylinder-left"
+          />
         </div>
       </div>
     </div>

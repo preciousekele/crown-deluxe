@@ -5,6 +5,7 @@ const initialState = {
   theme: 'dark',
   language: 'en',
   notifications: [],
+  isAppDownloadModalOpen: false,
 }
 
 const appSlice = createSlice({
@@ -31,6 +32,12 @@ const appSlice = createSlice({
         notification => notification.id !== action.payload
       )
     },
+    openAppDownloadModal: (state) => {
+      state.isAppDownloadModalOpen = true
+    },
+    closeAppDownloadModal: (state) => {
+      state.isAppDownloadModalOpen = false
+    }
   },
 })
 
@@ -39,6 +46,9 @@ export const {
   setTheme, 
   setLanguage, 
   addNotification, 
-  removeNotification 
+  removeNotification,
+  openAppDownloadModal,
+  closeAppDownloadModal
 } = appSlice.actions
+
 export default appSlice.reducer

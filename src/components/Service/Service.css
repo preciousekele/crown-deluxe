@@ -29,6 +29,7 @@
   margin: 0;
   text-transform: uppercase;
   position: relative;
+  font-family: "PP Neue Montreal Medium", sans-serif;
 }
 
 .section-title::after {
@@ -56,11 +57,12 @@
 
 .slide-number {
   font-size: 42px;
-  font-weight: 100;
+  font-weight: 300;
   color: rgba(0, 0, 0, 1);
   line-height: 100%;
   letter-spacing: 0;
   text-align: center;
+  font-family: "PP Neue Montreal Thin", sans-serif;
 }
 
 .main-content {
@@ -79,6 +81,7 @@
   max-width: 800px;
   letter-spacing: -1px;
   vertical-align: middle;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .carousel-container {
@@ -99,7 +102,7 @@
   top: 0;
   bottom: 0;
   width: 0.5px;
-  height: 570px;
+  height: 595px;
   background: rgba(53, 23, 48, 1);
   transform: translateX(-30px);
 }
@@ -191,18 +194,18 @@
 
 .service-title {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 900;
   margin: 0;
   line-height: 100%;
   text-align: center;
   color: #8b5a3c;
   transition: color 0.3s ease;
   letter-spacing: 0px;
+  font-family: "PP Neue Montreal Thin", sans-serif;
 }
 
 .service-description {
-  font-family: "Neue Montreal", sans-serif;
-  font-weight: 400;
+  font-weight: 800;
   font-style: normal;
   font-size: 16px;
   line-height: 25.6px;
@@ -210,6 +213,7 @@
   text-align: justify;
   vertical-align: middle;
   margin: 0;
+  font-family: "PP Neue Montreal Thin", sans-serif;
 }
 .carousel-main {
   position: relative;
@@ -282,13 +286,14 @@
 
 .slide-description {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 800;
   line-height: 25.6px;
   margin: 0 0 20px 0;
   color: rgba(0, 0, 0, 1);
   text-align: justify;
   width: 100%;
   align-self: flex-start;
+  font-family: "PP Neue Montreal Thin", sans-serif;
 }
 
 .contact-btn {
@@ -351,7 +356,7 @@
 
 .featured-title {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 100;
   color: rgba(9, 9, 9, 1);
   letter-spacing: 0px;
   margin: 0 0 60px 0;
@@ -359,6 +364,7 @@
   text-align: center;
   height: 22px;
   margin-top: -74px;
+  font-family: "PP Neue Montreal Medium", sans-serif;
 }
 
 .product-showcase {
@@ -407,6 +413,7 @@
   letter-spacing: 0px;
   text-align: center;
   font-display: medium;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .product-category {
@@ -416,6 +423,7 @@
   line-height: 100%;
   letter-spacing: 0%;
   margin: 0;
+  font-family: "PP Neue Montreal Medium", sans-serif;
 }
 
 .product-price {
@@ -424,15 +432,17 @@
   gap: 12px;
   margin-top: 20px;
   height: 38px;
+  font-family: "PP Neue Montreal Medium", sans-serif;
 }
 
 .price-label {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 800;
   color: rgba(53, 23, 48, 1);
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
+  font-family: "PP Neue Montreal Thin", sans-serif;
 }
 
 .price-value {
@@ -509,6 +519,8 @@
   align-items: center;
   justify-content: center;
   padding: 10px 24px 10px 23px;
+  font-weight: 500;
+  font-family: "PP Neue Montreal Thin", sans-serif;
 }
 
 .product-dot.active {
@@ -554,15 +566,18 @@
   color: rgba(255, 255, 255, 1);
   margin-top: -60px;
   margin-bottom: 50px;
+  font-weight: 500;
+  font-family: "PP Neue Montreal Thin", sans-serif;
 }
 
 .download-text {
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 100;
   line-height: 100%;
   letter-spacing: -0.2px;
   margin: 0 0 30px 0;
   color: rgba(255, 255, 255, 0.9);
+  font-family: "PP Neue Montreal Medium", sans-serif;
 }
 
 .download-buttons {

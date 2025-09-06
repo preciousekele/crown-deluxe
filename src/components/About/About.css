@@ -34,6 +34,7 @@
   margin-top: 60px;
   vertical-align: middle;
   height: 22px;
+  font-family: "PP Neue Montreal Medium", sans-serif;
 }
 
 .title-underline {
@@ -51,18 +52,20 @@
   margin-bottom: 40px;
   color: #ffffff;
   letter-spacing: -1px;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .about-description {
   width: 494px;
   height: 140px;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 28px;
   color: #ffffff;
   color: rgba(255, 255, 255, 1);
   vertical-align: middle;
   text-align: justify;
+  font-family: "PP Neue Montreal Thin", sans-serif;
 }
 
 .about-right {
@@ -94,6 +97,7 @@
   margin-bottom: 8px;
   color: rgba(255, 255, 255, 1);
   letter-spacing: -0.2px;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .stat-label {
@@ -102,6 +106,7 @@
   color: rgba(255, 255, 255, 1);
   line-height: 25.6px;
   letter-spacing: -0.2px;
+  font-family: "PP Neue Montreal Medium", sans-serif;
 }
 
 .about-image {

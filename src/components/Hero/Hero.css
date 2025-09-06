@@ -72,16 +72,17 @@
 }
 
 .hero-subtitle {
-  font-size: 26px;
+  font-size: 28px;
   color: rgba(255, 255, 255, 1);
   line-height: 30px;
   margin-bottom: 2.5rem;
   opacity: 0.95;
   animation: fadeInUp 1s ease-out 0.3s both;
-  font-weight: 200;
+  font-weight: 400;
   font-style: regular;
   margin-top: -2rem;
   letter-spacing: 0;
+  font-family: 'PP Neue Montreal Medium';
 }
 
 .app-download-buttons {

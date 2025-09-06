@@ -1,11 +1,11 @@
 .map-container {
   width: 100%;
-  max-width: 100%;
+  max-width: 10%;
 }
 
 .map-wrapper {
   position: relative;
-  padding-bottom: 75%; /* 4:3 aspect ratio */
+  padding-bottom: 75%; 
   height: 0;
   overflow: hidden;
   max-width: 100%;
@@ -22,7 +22,6 @@
   border-radius: 8px;
 }
 
-/* Desktop - original size */
 @media screen and (min-width: 1025px) {
   .map-wrapper {
     padding-bottom: 0;
@@ -37,7 +36,6 @@
   }
 }
 
-/* Tablet - reduced size to fit better */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .map-wrapper {
     padding-bottom: 0;
@@ -54,10 +52,9 @@
   }
 }
 
-/* Mobile - responsive aspect ratio */
 @media screen and (max-width: 767px) {
   .map-wrapper {
-    padding-bottom: 60%; /* Slightly less tall on mobile */
+    padding-bottom: 60%; 
     height: 0;
     margin: 0 10px;
     max-width: calc(100% - 20px);
@@ -72,7 +69,6 @@
   }
 }
 
-/* Extra small devices */
 @media screen and (max-width: 480px) {
   .map-wrapper {
     margin: 0 5px;

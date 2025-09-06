@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from '../Header/Header';
 import './Contact.css';
 import phoneImg from "/images/contact/phone.png";
@@ -32,7 +31,7 @@ const Contact = ({ onNavigate }) => {
                   <img src={locationImg} alt="WhatsApp" className="social-icon" />
                 </div>
                 <div>
-                  <p>Plot 19, Block IV Ameri Estate Phase 2,</p>
+                  <p>Plot 19, Block IV Amen Estate Phase 2,</p>
                   <p>Ibeju Lekki Lagos State.</p>
                 </div>
               </div>
@@ -115,7 +114,7 @@ const Contact = ({ onNavigate }) => {
               className="rounded-lg shadow-md"
             />
            <PlaceOrder />
-      <Footer />
+      <Footer onNavigate={onNavigate} />
     </div>
   );
 };

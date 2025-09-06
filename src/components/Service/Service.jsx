@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import "./Service.css";
 import { ChevronRight } from "lucide-react";
-import playstore from "/images/playstore.png"
+import playstore from "/images/playstore.png";
+import { useDispatch } from 'react-redux'
+import { openAppDownloadModal } from '../../redux/slices/appSlice'
 
 const CAROUSEL_DATA = [
   {
@@ -9,6 +11,8 @@ const CAROUSEL_DATA = [
     title: "Automated Gas Station Construction",
     description:
       "Our expert Engineering and Installation Service by our Certified technicians has the resources to asist you in building or upgrading your LPG Gas Station to meet international standards.",
+    slideDescription:
+      "Our skilled construction and installation service, provided by our qualified specialists, is competent and equipped with the tools to help you develop or upgrade your facility to meet international standards while maintaining a modern and inviting appearance. Our modern facilities and plants offer your clients the finest value. Offering your clients a modern LPG facility makes their one-stop shopping experience more convenient. Additionally, it boosts cross-selling opportunities and store traffic, which enhances your revenues! We source the best equipment from reliable international businesses and install it. Additionally, our equipment satisfies international standards and has SON approval. We construct and deliver your facility quickly and precisely on the scheduled handover date.",
     image: "/images/services/automatedgas.png",
     icon: "/images/services/services1.svg",
   },
@@ -17,6 +21,8 @@ const CAROUSEL_DATA = [
     title: "Bulk LPG Sale",
     description:
       "We provide easy retail LPG services. Families and neighbourhood retailers can easily obtain cooking gas thanks to our refilling plants.",
+    slideDescription:
+      "We provide easy retail LPG services. Families and neighborhood retailers can easily obtain cooking gas thanks to our refilling plants. To give our clients safe, effective, and reasonably priced energy for their daily needs, we are committed to offering premium LPG at competitive rates. With a dedication to client satisfaction, we guarantee a quick and easy refilling experience while offering solutions that maintain the efficiency of your house or place of business.",
     image: "/images/services/brandgas.png",
     icon: "/images/services/services2.svg",
   },
@@ -25,6 +31,8 @@ const CAROUSEL_DATA = [
     title: "Real-time Gas Tracking",
     description:
       "Customers who order LPG for their homes and gas stations will have access to driver's real-time location tracking at their fingertips.",
+    slideDescription:
+      "Customers who order LPG for their homes and gas stations will have access to driver's real-time location tracking at their fingertips. We'll keep you informed with regular text message updates and a live view of your delivery as it travels from our depot to your door. A little technological trick that makes a big difference for your convenience and comfort.",
     image: "/images/services/truck.jpg",
     icon: "/images/services/services1.svg",
   },
@@ -42,28 +50,28 @@ const FEATURED_PRODUCTS = [
     id: 2,
     name: "6kg Gas Cylinder",
     category: "Accessories",
-    price: "₦8,500.00",
+    price: "₦24,600.00",
     image: "/images/featured/about3.png",
   },
   {
     id: 3,
-    name: "12kg Gas Cylinder",
+    name: "12.5kg Gas Cylinder",
     category: "Accessories",
-    price: "₦15,000.00",
+    price: "₦37,300.00",
     image: "/images/featured/about2.png",
   },
   {
     id: 4,
     name: "50kg Gas Cylinder",
     category: "Accessories",
-    price: "₦45,000.00",
+    price: "₦125,000.00",
     image: "/images/featured/about1.png",
   },
 ];
 
 const AUTO_SCROLL_INTERVAL = 5000;
 
-const Services = () => {
+const Services = ({ onNavigate }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
   const [currentProduct, setCurrentProduct] = useState(0);
@@ -109,7 +117,7 @@ const Services = () => {
 
   const handleProductNav = (direction) => {
     setIsProductAutoScrolling(false);
-    
+
     if (direction === "prev") {
       setCurrentProduct((prev) =>
         prev === 0 ? FEATURED_PRODUCTS.length - 1 : prev - 1
@@ -121,6 +129,13 @@ const Services = () => {
     setTimeout(() => {
       setIsProductAutoScrolling(true);
     }, 10000);
+  };
+
+  const dispatch = useDispatch();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    dispatch(openAppDownloadModal());
   };
 
   const currentData = CAROUSEL_DATA[currentSlide];
@@ -140,9 +155,8 @@ const Services = () => {
 
           <div className="main-content">
             <h3 className="main-title">
-              We provide bulk LPG supply, automated
-              gas station construction, and real-time
-              delivery tracking for seamless operations.
+              We provide bulk LPG supply, automated gas station construction,
+              and real-time delivery tracking for seamless operations.
             </h3>
           </div>
 
@@ -193,16 +207,13 @@ const Services = () => {
 
                 <div className="slide-content">
                   <p className="slide-description">
-                    We are dedicated to providing high-quality LPG at
-                    competitive prices. We provide easy retail LPG services.
-                    Families and neighbourhood retailers can easily obtain
-                    cooking gas thanks to our refilling plants. To give clients
-                    safe, effective and reasonably priced energy for their daily
-                    needs, we are committed to offering premium LPG at
-                    competitive rates.
+                    {currentData.slideDescription}
                   </p>
 
-                  <button className="contact-btn">
+                  <button
+                    className="contact-btn"
+                    onClick={() => onNavigate("contact")}
+                  >
                     Contact us now
                     <ChevronRight className="arrow-icon" />
                   </button>
@@ -217,9 +228,9 @@ const Services = () => {
         <div className="featured-container">
           <div className="featured-content">
             <div className="product-showcase">
-                <div className="featured-header">
-                  <h2 className="featured-title">FEATURED PRODUCTS</h2>
-                </div>
+              <div className="featured-header">
+                <h2 className="featured-title">FEATURED PRODUCTS</h2>
+              </div>
               <div className="product-info">
                 <h3 className="product-name">{currentProductData.name}</h3>
                 <p className="product-category">
@@ -278,31 +289,40 @@ const Services = () => {
             <p className="download-text">
               View all Products by downloading our mobile app
             </p>
-            <div className="download-buttons">
-        
-            </div>
+            <div className="download-buttons"></div>
 
             <div className="download-buttons">
-            <a href="#" className="download-btn google-play">
-              <div className="btn-icon">
-                <img src={playstore} alt="Gas flame background"/>
-              </div>
-              <div className="btn-text">
-                <span className="btn-sub">Download on Google Play</span>
-              </div>
-            </a>
-            
-            <a href="#" className="download-btn app-store">
-              <div className="btn-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24">
-                  <path fill="currentColor" d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z" />
-                </svg>
-              </div>
-              <div className="btn-text">
-                <span className="btn-sub">Download on Apple Store</span>
-              </div>
-            </a>
-          </div>
+              <a
+                href="#"
+                className="download-btn google-play"
+                onClick={handleClick}
+              >
+                <div className="btn-icon">
+                  <img src={playstore} alt="Gas flame background" />
+                </div>
+                <div className="btn-text">
+                  <span className="btn-sub">Download on Google Play</span>
+                </div>
+              </a>
+
+              <a
+                href="#"
+                className="download-btn app-store"
+                onClick={handleClick}
+              >
+                <div className="btn-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path
+                      fill="currentColor"
+                      d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"
+                    />
+                  </svg>
+                </div>
+                <div className="btn-text">
+                  <span className="btn-sub">Download on Apple Store</span>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>

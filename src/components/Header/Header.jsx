@@ -15,7 +15,7 @@ const Header = ({ onNavigate }) => {
     { id: 'partners', label: 'Our Partners' },
     { id: 'contact', label: 'Contact us' }
   ]
-
+  
   const handleNavClick = (sectionId) => {
     onNavigate(sectionId)
     dispatch(setMenuOpen(false))

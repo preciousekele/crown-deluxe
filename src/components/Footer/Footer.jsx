@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 import logoImg from "/images/logo.png";
 import facebookImg from "/images/footer/facebook.svg";
@@ -6,8 +5,24 @@ import instagramImg from "/images/footer/instagram.svg";
 import whatsappImg from "/images/footer/whatsapp.svg";
 import emailImg from "/images/footer/email.png";
 import playstore from "/images/playstore.png";
+import { useDispatch } from 'react-redux'
+import { openAppDownloadModal } from '../../redux/slices/appSlice'
 
-const Footer = () => {
+const Footer = ({ onNavigate }) => {
+  const dispatch = useDispatch()
+  
+  const handleClick = (e) => {
+    e.preventDefault()
+    dispatch(openAppDownloadModal())
+  }
+
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault()
+    if (onNavigate) {
+      onNavigate(sectionId)
+    }
+  }
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -39,19 +54,19 @@ const Footer = () => {
             <h3 className="footer-title">Navigation</h3>
             <ul className="link-list">
               <li className="link-item">
-                <a href="about">About Us</a>
+                <a href="#" onClick={(e) => handleNavClick(e, 'offer')}>About Us</a>
               </li>
               <li className="link-item">
-                <a href="#">Our Products</a>
+                <a href="#" onClick={(e) => handleNavClick(e, 'services')}>Our Products</a>
               </li>
               <li className="link-item">
-                <a href="#">What we offer</a>
+                <a href="#" onClick={(e) => handleNavClick(e, 'offer')}>What we offer</a>
               </li>
               <li className="link-item">
-                <a href="#">Our Partners</a>
+                <a href="#" onClick={(e) => handleNavClick(e, 'partners')}>Our Partners</a>
               </li>
               <li className="link-item">
-                <a href="#">Contact us</a>
+                <a href="#" onClick={(e) => handleNavClick(e, 'contact')}>Contact us</a>
               </li>
             </ul>
           </div>
@@ -61,16 +76,16 @@ const Footer = () => {
             <h3 className="footer-title">Featured Products</h3>
             <ul className="link-list">
               <li className="link-item">
-                <a href="#">3kg gas cylinder</a>
+                <a href="#" onClick={(e) => handleNavClick(e, 'services')}>3kg gas cylinder</a>
               </li>
               <li className="link-item">
-                <a href="#">12.5kg gas cylinder</a>
+                <a href="#" onClick={(e) => handleNavClick(e, 'services')}>12.5kg gas cylinder</a>
               </li>
               <li className="link-item">
-                <a href="#">Gas Aluminium Burner</a>
+                <a href="#" onClick={(e) => handleNavClick(e, 'services')}>Gas Aluminium Burner</a>
               </li>
               <li className="link-item">
-                <a href="#">Gas Regulators</a>
+                <a href="#" onClick={(e) => handleNavClick(e, 'services')}>Gas Regulators</a>
               </li>
             </ul>
           </div>
@@ -105,7 +120,7 @@ const Footer = () => {
 
             {/* App Download Buttons */}
             <div className="footer-app-download-buttons">
-              <a href="#" className="footer-download-btn google-play">
+              <a href="#" className="footer-download-btn google-play" onClick={handleClick}>
                 <div className="footer-btn-icon">
                   <img src={playstore} alt="Google Play" className="footer-icon-google"/>
                 </div>
@@ -116,7 +131,7 @@ const Footer = () => {
                 </div>
               </a>
 
-              <a href="#" className="footer-download-btn app-store">
+              <a href="#" className="footer-download-btn app-store" onClick={handleClick}>
                 <div className="footer-btn-icon">
                   <svg viewBox="0 0 24 24" width="24" height="24">
                     <path
@@ -137,7 +152,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="copyright">
-          <p>Crown Deluxe © 2025. All Rights Reserved</p>
+          <p>Crown Deluxe Â© 2025. All Rights Reserved</p>
         </div>
       </div>
     </footer>
