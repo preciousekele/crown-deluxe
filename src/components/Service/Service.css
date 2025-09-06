@@ -205,13 +205,14 @@
 }
 
 .service-description {
-  font-weight: 800;
+  font-weight: 900;
   font-style: normal;
   font-size: 16px;
   line-height: 25.6px;
   letter-spacing: 0px;
   text-align: justify;
   vertical-align: middle;
+  letter-spacing: .5px;
   margin: 0;
   font-family: "PP Neue Montreal Thin", sans-serif;
 }
@@ -286,14 +287,13 @@
 
 .slide-description {
   font-size: 16px;
-  font-weight: 800;
   line-height: 25.6px;
   margin: 0 0 20px 0;
-  color: rgba(0, 0, 0, 1);
+  color: rgb(62, 61, 61);
   text-align: justify;
   width: 100%;
   align-self: flex-start;
-  font-family: "PP Neue Montreal Thin", sans-serif;
+  font-family: "PP Neue Montreal Medium", sans-serif;
 }
 
 .contact-btn {
