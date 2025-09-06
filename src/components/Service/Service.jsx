@@ -12,7 +12,7 @@ const CAROUSEL_DATA = [
     description:
       "Our expert Engineering and Installation Service by our Certified technicians has the resources to asist you in building or upgrading your LPG Gas Station to meet international standards.",
     slideDescription:
-      "Our skilled construction and installation service, provided by our qualified specialists, is competent and equipped with the tools to help you develop or upgrade your facility to meet international standards while maintaining a modern and inviting appearance. Our modern facilities and plants offer your clients the finest value. Offering your clients a modern LPG facility makes their one-stop shopping experience more convenient. Additionally, it boosts cross-selling opportunities and store traffic, which enhances your revenues! We source the best equipment from reliable international businesses and install it. Additionally, our equipment satisfies international standards and has SON approval. We construct and deliver your facility quickly and precisely on the scheduled handover date.",
+      "At Crown Deluxe, we specialize in designing and constructing modern, fully automated gas stations tailored to today’s energy needs. Our approach integrates cutting-edge technology with world-class safety standards, ensuring smooth operations, minimal human error, and maximum efficiency. From planning and design to installation and maintenance, we deliver turnkey solutions that help businesses scale faster and operate smarter. With automation at the core, our stations provide convenience, reliability, and a future-ready fueling experience for both operators and customers.",
     image: "/images/services/automatedgas.png",
     icon: "/images/services/services1.svg",
   },
@@ -22,7 +22,7 @@ const CAROUSEL_DATA = [
     description:
       "We provide easy retail LPG services. Families and neighbourhood retailers can easily obtain cooking gas thanks to our refilling plants.",
     slideDescription:
-      "We provide easy retail LPG services. Families and neighborhood retailers can easily obtain cooking gas thanks to our refilling plants. To give our clients safe, effective, and reasonably priced energy for their daily needs, we are committed to offering premium LPG at competitive rates. With a dedication to client satisfaction, we guarantee a quick and easy refilling experience while offering solutions that maintain the efficiency of your house or place of business.",
+      "We give our clients safe, effective, and reasonably priced energy for their daily needs, we are committed to offering premium LPG at competitive rates. With a dedication to client satisfaction, we guarantee a quick and easy refilling experience while offering solutions that maintain the efficiency of your house or place of business.",
     image: "/images/services/brandgas.png",
     icon: "/images/services/services2.svg",
   },
@@ -32,11 +32,12 @@ const CAROUSEL_DATA = [
     description:
       "Customers who order LPG for their homes and gas stations will have access to driver's real-time location tracking at their fingertips.",
     slideDescription:
-      "Customers who order LPG for their homes and gas stations will have access to driver's real-time location tracking at their fingertips. We'll keep you informed with regular text message updates and a live view of your delivery as it travels from our depot to your door. A little technological trick that makes a big difference for your convenience and comfort.",
+      "Customers who order LPG for their homes or gas stations can enjoy the convenience of tracking of their delivery. With just a few taps, they can monitor your order, know the estimated time of arrival, and stay updated throughout the process. This ensures transparency, reliability, and peace of mind, as customers are always informed about where their gas delivery is and when it will reach them.",
     image: "/images/services/truck.jpg",
     icon: "/images/services/services1.svg",
   },
 ];
+
 
 const FEATURED_PRODUCTS = [
   {
