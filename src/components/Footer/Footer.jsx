@@ -157,7 +157,7 @@ const Footer = ({ onNavigate }) => {
 
         {/* Copyright */}
         <div className="copyright">
-          <p>Crown Deluxe Â© 2025. All Rights Reserved</p>
+          <p>Crown Deluxe © 2025. All Rights Reserved</p>
         </div>
       </div>
     </footer>

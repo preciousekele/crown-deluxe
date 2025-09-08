@@ -81,19 +81,17 @@
   }
 }
 
-/* Pause animation on hover */
 .partner-container:hover .partner-track {
   animation-play-state: paused;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .partner-container {
     padding: 0 10px;
   }
 
   .partner-header {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 40px;
   }
   
@@ -102,17 +100,18 @@
   }
   
   .partner-subtitle {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 100%;
     letter-spacing: 0px;
   }
   
   .partner-title {
-    font-size: 24px;
+    font-size: 20px;
      font-weight: 400;
     line-height: 37px;
     letter-spacing: -1px;
+    margin-top: -15px;
   }
   
   .partner-track {
@@ -125,7 +124,7 @@
   }
   .partner-slider-container{
     margin-top: -10px;
-    margin-bottom: 0px;
+    margin-bottom: -20px;
   }
 }
 

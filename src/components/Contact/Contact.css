@@ -218,7 +218,7 @@
 /* Mobile View - max-width: 767px */
 @media screen and (max-width: 767px) {
   .contact-container {
-    padding: 40px 16px 20px;
+    padding: 4px 16px 20px;
   }
 
   .contact-content {
@@ -228,28 +228,28 @@
   }
 
   .contact-info h1 {
-    font-size: 36px;
+    font-size: 24px;
     line-height: 44px;
     margin-bottom: 16px;
   }
 
   .contact-info p {
     width: 100%;
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 24px;
     line-height: 130%;
   }
 
   .contact-details {
-    gap: 16px;
+    gap: 8px;
   }
 
   .contact-item {
-    gap: 12px;
+    gap: 10px;
   }
 
   .contact-item p {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 10px;
   }
 
@@ -291,8 +291,8 @@
   }
 
   .contact-icon img {
-    width: 25px;
-    height: 25px;
+    width: 21px;
+    height: 20px;
   }
   .contact-icon {
     margin-top: -8px;
