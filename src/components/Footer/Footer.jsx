@@ -2,6 +2,7 @@ import "./Footer.css";
 import logoImg from "/images/logo.png";
 import facebookImg from "/images/footer/facebook.svg";
 import instagramImg from "/images/footer/instagram.svg";
+import linkedLnImg from "/images/footer/linkedln.webp";
 import whatsappImg from "/images/footer/whatsapp.svg";
 import emailImg from "/images/footer/email.png";
 import playstore from "/images/playstore.png";
@@ -107,6 +108,10 @@ const Footer = ({ onNavigate }) => {
                   className="social-icon"
                 />
                 <span>Instagram</span>
+              </a>
+              <a href="http://linkedin.com/company/crown-deluxe-limited" className="social-link social-linkedin">
+                <img src={linkedLnImg} alt="LinkedIn" className="social-icon" />
+                <span>LinkedIn</span>
               </a>
               <a href="https://api.whatsapp.com/send/?phone=2348108367553&text&type=phone_number&app_absent=0" className="social-link social-whatsapp">
                 <img src={whatsappImg} alt="WhatsApp" className="social-icon" />
