@@ -90,6 +90,25 @@ const Footer = ({ onNavigate }) => {
               </li>
             </ul>
           </div>
+
+          {/* Company Section */}
+          <div className="footer-company">
+            <h3 className="footer-title">Company</h3>
+            <ul className="link-list">
+              <li className="link-item">
+                <a href="#" onClick={(e) => handleNavClick(e, 'privacy-policy')}>Privacy Policy</a>
+              </li>
+              <li className="link-item">
+                <a href="#" onClick={(e) => handleNavClick(e, 'terms-conditions')}>Terms & Conditions</a>
+              </li>
+              <li className="link-item">
+                <a href="#" onClick={(e) => handleNavClick(e, 'returns-refund')}>Returns & Refund Policy</a>
+              </li>
+              <li className="link-item">
+                <a href="#" onClick={(e) => handleNavClick(e, 'lpg-safety')}>LPG Safety Guide</a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Social Media and App Downloads */}

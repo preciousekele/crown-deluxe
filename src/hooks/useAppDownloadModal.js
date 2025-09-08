@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { openAppDownloadModal } from '../redux/appSlice' // Adjust path to your appSlice
+import { openAppDownloadModal } from '../redux/appSlice' 
 
 export const useAppDownloadModal = () => {
   const dispatch = useDispatch()
