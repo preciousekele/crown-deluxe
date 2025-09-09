@@ -82,7 +82,7 @@
   font-style: regular;
   margin-top: -2rem;
   letter-spacing: 0;
-  font-family: 'PP Neue Montreal Medium';
+  font-family: "PP Neue Montreal Medium";
 }
 
 .app-download-buttons {
@@ -111,6 +111,16 @@
 
 .download-btn.app-store {
   background: rgba(116, 49, 104, 1);
+}
+
+.download-btn.google-play:hover {
+  background: rgba(242, 235, 241, 1);
+  color: rgba(127, 54, 114, 1);
+}
+
+.download-btn.app-store:hover {
+  background: rgba(242, 235, 241, 1);
+  color: rgba(0, 0, 0, 1);
 }
 
 .btn-icon {

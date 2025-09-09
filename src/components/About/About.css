@@ -73,7 +73,7 @@
   flex-direction: column;
   gap: 70px;
   justify-self: end;
-  margin-top: 90px;
+  margin-top: 80px;
   margin-left: 75px;
 }
 
@@ -112,7 +112,7 @@
 .about-image {
   position: relative;
   width: 627px;
-  height: 291px;
+  height: 331px;
   border-radius: 10px;
   background-color: rgba(90, 38, 81, 1);
   overflow: hidden;
@@ -121,9 +121,10 @@
 .about-image .about-image-desktop {
   position: relative;
   width: 627px;
-  height: 297px;
+  height: 485px;
   background-color: rgba(90, 38, 81, 1);
   overflow: hidden;
+  margin-top: -18px;
 }
 
 .about1 {
@@ -233,8 +234,8 @@
   }
   .about-image .about-image-desktop {
     position: relative;
-    width: 422px;
-    height: 275px;
+    width: 452px;
+    height: 295px;
     background-color: rgba(90, 38, 81, 1);
     overflow: hidden;
   }
@@ -343,7 +344,7 @@
     margin-top: -230px;
     order: 2;
     gap:50px;
-    margin-left: -10px;
+    margin-left: -60px;
   }
 
   .stat-item {
@@ -371,11 +372,12 @@
     position: relative;
     margin-top: 300px;
     margin-bottom: 40px;
-    margin-left: -0px;
+    margin-left: -35px;
   }
 
   .about-image .about-image-mobile {
-    height: 276px;
+    height: 286px;
+    margin-left: -10px;
   }
 
   .about-image .about-image-desktop {

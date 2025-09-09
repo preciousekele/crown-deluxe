@@ -25,7 +25,7 @@ const Contact = ({ onNavigate }) => {
               Have questions or need assistance? Reach out to us today — we're here to provide the support you need.
             </p>
             
-            <div className="contact-details">
+            <div className="contact-detailss">
               <div className="contact-item">
                 <div className="contact-icon">
                   <img src={locationImg} alt="WhatsApp" className="social-icon" />
@@ -64,7 +64,7 @@ const Contact = ({ onNavigate }) => {
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Olabanji David"
+                  placeholder="John Doe"
                   required
                 />
               </div>
@@ -75,7 +75,7 @@ const Contact = ({ onNavigate }) => {
                   type="tel"
                   id="phone"
                   name="phone"
-                  placeholder="+234 811 474 6609"
+                  placeholder="(+234) 811-424-6268"
                   required
                 />
               </div>
@@ -86,7 +86,7 @@ const Contact = ({ onNavigate }) => {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="benjidheevid216@gmail.com"
+                  placeholder="johndoe@gmail.com"
                   required
                 />
               </div>

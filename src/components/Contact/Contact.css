@@ -39,7 +39,7 @@
   font-family: "PP Neue Montreal Medium", sans-serif;
 }
 
-.contact-details {
+.contact-detailss {
   display: flex;
   flex-direction: column;
   gap: 23px;
@@ -175,7 +175,7 @@
     margin-bottom: 32px;
   }
 
-  .contact-details {
+  .contact-detailss {
     gap: 10px;
   }
 
@@ -240,7 +240,7 @@
     line-height: 130%;
   }
 
-  .contact-details {
+  .contact-detailss {
     gap: 8px;
   }
 
